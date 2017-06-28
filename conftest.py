@@ -1,21 +1,17 @@
-import pytest
-#from selenium.webdriver import Chrome
 from selenium import webdriver
+import pytest
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 
-@pytest.fixture
-def webdriver(request):
-	driver = Chrome('/chromedriver')
-	request.addfinalizer(driver.quit)
+
+@pytest.fixture(scope="function")
+def start_browser(request):
+	binary = FirefoxBinary('/Users/Paul/Downloads/geckodriver')
+	driver = webdriver.Firefox(firefox_binary = binary)
 	return driver
 
 
-def test_nix_website_title(webdriver):
-	webdriver.get('https://nixos.org/nix/')
-	assert 'Nix' in webdriver.title
 
-
-def test_pytest_website_title(webdriver):
-	webdriver.get('https://pytest.org/latest/')
-	assert 'pytest' in webdriver.title
-
+#driver = webdriver.Chrome('/usr/local/bin/chromedriver')
+#driver = webdriver.Chrome('/chromedriver')
+#driver.get("http://www.imdb.com"
