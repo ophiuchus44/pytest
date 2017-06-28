@@ -1,0 +1,40 @@
+
+	//////////////////////////////////////////////////////////////////////////
+	// Top navigation section (left to rightish)                            //
+	// _ID = selector by ID                                                 //
+	// _CSS = selector by CSS                                               //
+	// I left out XPATH cuz it would be slower                              // 
+	// I could also have created 2 separate UI configs.jsons 2 split CSS/ID //
+	//////////////////////////////////////////////////////////////////////////
+
+
+/// NOTE: Make first series of tests check these selectors before performing additional tests
+/// if selectors don't work when asserted, then more complicated tests wont work that have to call them
+{	
+
+	"imdb_logo_ID" : "home_img",
+	"imdb_logo_CSS" : "#home_img",
+
+
+	"navMenu_search_txtBox_CSS" : "#navbar-query" ,
+	"navMenu_search_submitBtn_CSS" : "#navbar-submit-button" ,
+	"navMenu_search_submitBtn_ID" : "navbar-submit-button",
+	
+	"navMenu_Movies_CSS" : "#navTitleMenu > p > a:nth-child(1)",
+	"navMenu_TV_CSS" : "#navTitleMenu > p > a:nth-child(2)" ,
+	"navMenu_Showtimes_CSS" : "#navTitleMenu > p > a:nth-child(4)",
+
+	"navMenu_Celebs_CSS" : "#navNameMenu > p > a:nth-child(1)",
+	"navMenu_Events_CSS" : "#navNameMenu > p > a:nth-child(2)" ,
+	"navMenu_Photos_CSS" : "#navNameMenu > p > a:nth-child(4)",
+
+	"navMenu_News_CSS" : "#navNewsMenu > p > a:nth-child(1)",
+	"navMenu_Community_CSS" : "#navNewsMenu > p > a:nth-child(3)" ,
+
+	"navMenu_Watchlist_CSS" : "#navWatchlistMenu > p > a",
+
+	"navMenu_Help_CSS" : "#nb_extra_nav > li:nth-child(3) > a"
+
+}
+
+
